@@ -1,6 +1,13 @@
 const express = require("express");
+// to log all of the request from the users
+const morgan = require("morgan");
 
 const app = express();
+
+//Middleware
+app.use(morgan('dev'));
+
+
 
 app.get("/", (req, res) => {
   let testName = "Nodejs";
